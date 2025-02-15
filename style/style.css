@@ -232,10 +232,31 @@ body {
 #replay {
   z-index: 3;
   cursor: pointer;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
 }
 
-#replay:hover{
-  background-color: #347a9d;
+
+#replay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ff4d6d;
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+#replay:hover {
+  color: #fff;
+}
+
+#replay:hover::before {
+  left: 0;
 }
 
 /* Media Queries */
