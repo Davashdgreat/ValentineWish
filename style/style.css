@@ -234,6 +234,10 @@ body {
   cursor: pointer;
 }
 
+#replay:hover{
+  background-color: #347a9d;
+}
+
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
